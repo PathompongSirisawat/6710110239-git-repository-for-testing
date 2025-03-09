@@ -2,16 +2,16 @@ import unittest
 from coe_6710110239.funnyString import funny_string
 
 class TestFunnyString(unittest.TestCase):  
-    def test_simple_funny(self):
+    def test_funny_string_dfhj(self):
         self.assertEqual(funny_string("dfhj"), "Funny")  
-    
-    def test_simple_funny(self):
-        self.assertNotEqual(funny_string("abcd"), "Not Funny")  
-    
-    def test_two_characters_funny(self):
+
+    def test_funny_string_abcd(self):
+        self.assertEqual(funny_string("abcd"), "Funny")  
+
+    def test_two_characters_funny_zx(self):
         self.assertEqual(funny_string("zx"), "Funny")  
     
-    def test_two_characters_funny(self):
+    def test_two_characters_funny_az(self):
         self.assertEqual(funny_string("az"), "Funny")  
 
     def test_palindrome_funny(self):
@@ -24,10 +24,10 @@ class TestFunnyString(unittest.TestCase):
         self.assertEqual(funny_string("kkkkk"), "Funny")
 
     def test_long_funny_string(self):
-        self.assertNotEqual(funny_string("zxvtrpnmkjihgfedcba"), "Funny")
+        self.assertEqual(funny_string("zxvtrpnmkjihgfedcba"), "Not Funny")
 
     def test_long_not_funny_string(self):
         self.assertEqual(funny_string("qwertyuiopasdfghjklzxcvbnm"), "Not Funny")
 
     def test_alternating_characters(self):
-        self.assertNotEqual(funny_string("abababab"), "Not Funny")
+        self.assertEqual(funny_string("abababab"), "Funny")
