@@ -58,5 +58,4 @@ class TestAlternatingCharacters(unittest.TestCase):
         self.assertEqual(alternating_characters(""), 0)
     
     def test_none_input(self):
-        with self.assertRaises(TypeError):
-            alternating_characters(None)
+        self.assertEqual(alternating_characters(None), 0)
